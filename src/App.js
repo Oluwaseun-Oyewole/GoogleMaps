@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Places } from "./components/Places/Places";
+import { Map } from "./components/Map/Map";
+import { Tab } from "./components/Tab/Tab";
+import { PlaceMap } from "./components/PlaceMap/PlaceMap";
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Tab
+        tabs={[
+          {
+            index: 0,
+            title: "Display Map",
+            component: () => <Map />,
+          },
+          {
+            title: "Search Places",
+            component: () => <PlaceMap />,
+          },
+        ]}
+      />
     </div>
   );
-}
-
-export default App;
+};
