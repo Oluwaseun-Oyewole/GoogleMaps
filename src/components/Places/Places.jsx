@@ -46,7 +46,9 @@ export const Places = ({ setPlace }) => {
   return (
     <>
       <div className="map__control__input">
-        <h1 className="pl-4 pt-5 text-2xl md:text-xl">Find a Place ?</h1>
+        <h1 className="text-center lg:pl-4 lg:text-left pt-5 text-2xl md:text-xl">
+          Find a Place ?
+        </h1>
         {!ready ? (
           <div className="text-center h-[100%] p-5">
             <Loader />
